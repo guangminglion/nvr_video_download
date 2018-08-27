@@ -1,0 +1,38 @@
+
+<%= form_for @conn, nvr_path(@conn, :download_videos), fn f -> %>
+Enter NVR information to download videos
+
+        <div class="row">
+
+            <div class="col-md-2">
+              <label >  NVR name   </label>
+                  <%= text_input :user, :nvrid, value: "" , id: "x1"%>
+
+              <label >  Host IP    </label>
+                  <%= text_input :user, :host, value: "" , id: "x1"%>
+
+                  <label >  Port     </label>
+                      <%= text_input :user, :port, value: "", id: "y1"%>
+
+                      <label >  Username    </label>
+                          <%= text_input :user, :username, value: "", id: "x2"%>
+
+                          <label >  Password    </label>
+                              <%= text_input :user, :password, value: "", id: "y2"%>
+
+                              <label >  channel    </label>
+                                  <%= text_input :user, :channel, value: "", id: "y2"%>
+
+                                  <label >  starttime    </label>
+                                      <%= text_input :user, :starttime, value: "", id: "y2"%>
+
+
+                                      <label >  endtime    </label>
+                                          <%= text_input :user, :endtime, value: "", id: "y2"%>
+
+
+                              <%= submit "Download" ,  class: "btn btn-default "%>
+
+
+
+<% end %>

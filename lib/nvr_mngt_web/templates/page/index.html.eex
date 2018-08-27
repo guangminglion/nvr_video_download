@@ -1,0 +1,24 @@
+
+<%= form_for @conn, nvr_path(@conn, :download_videos), fn f -> %>
+        <div class="row">
+
+    <!--    <%= @device.mac_addr  %>-->
+
+    <!--    <%=  IO.inspect(String.slice(@device.mac_addr, -6..-1)) %>-->
+            <div class="col-md-4">
+              <label >  X1    </label>
+                  <%= text_input :user, :x1, value: "" , id: "x1"%>
+
+                  <label >  Y1    </label>
+                      <%= text_input :user, :y1, value: "", id: "y1"%>
+
+                      <label >  X2    </label>
+                          <%= text_input :user, :x2, value: "", id: "x2"%>
+
+                          <label >  Y2    </label>
+                              <%= text_input :user, :y2, value: "", id: "y2"%>
+                              <%= submit "Set Mask" ,  class: "btn btn-default "%>
+
+
+
+<% end %>
